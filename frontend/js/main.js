@@ -9,7 +9,7 @@ createApp({
 
   mounted() {
     axios
-      .get("http://localhost/php-dischi-json/backend/api/get-dischi.php")
+      .get("./dischi/localhost/php-dischi-json/backend/api/get-dischi.php")
       .then((response) => {
         this.dischi = response.data;
       });

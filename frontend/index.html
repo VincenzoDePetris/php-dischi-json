@@ -13,6 +13,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -20,6 +22,31 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <nav class="navbar bg-dark">
+          <div class="container-fluid container">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./img/Spotify_logo_without_text.svg.webp"
+                width="30"
+                height="30"
+                class="d-inline-block align-text-top"
+              />
+            </a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="container playlist">
+          <div class="card" v-for="(disco, index) in dischi">
+            <img :src="disco.poster" alt="" />
+            <h5>{{ disco.title }}</h5>
+            <p>{{ disco.author }}</p>
+            <p><b>{{ disco.year }}</b></p>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
